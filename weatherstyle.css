@@ -88,16 +88,16 @@
 }
 
 .card {
-    background-color: blue;
+    background-color: #77dd77;
     color: white;
     margin: 1%;  
     padding: 1em;
     border-radius: 0.3em;
     float: left;
-    width:18%;
+    width:31%;
 }
 
 #forecastDate {
     font-weight: bold;
-    color: gold;
+    color: navy;
 }
