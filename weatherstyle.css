@@ -17,6 +17,10 @@
     margin-left: 1em;
 }
 
+#search-value {
+    width: 10em;
+}
+
 .history-button {
     margin: 0.5em;
     margin-top: 0em;
@@ -40,7 +44,7 @@
 #today {
     background-color: rgb(253, 235, 183);
     margin: 1em;
-    padding: 1em;
+    padding: 1em,1em,0,1em;
     border-radius: 0.3em;
 }
 
@@ -50,12 +54,13 @@
 
 .todayCard {
     float: left;
+    padding-bottom: 0;
 }
 
 #forecast {
     background-color: rgb(253, 235, 183);
     margin: 1em;
-    padding: 1em;
+    padding: 1em,1em,0,1em;
     border-radius: 0.3em;
     height: 50%;
 }
@@ -67,8 +72,8 @@
 
 #todayImg {
    /* margin-top: 0;  */
-   height: 16rem;
-   width: 16rem;
+   height: 8rem;
+   width: 8rem;
 }
 
 .weatherRow {
@@ -89,6 +94,7 @@
     padding: 1em;
     border-radius: 0.3em;
     float: left;
+    width:18%;
 }
 
 #forecastDate {

@@ -15,6 +15,9 @@ body {
   color: white;
   border-radius: 0;
   border-bottom: 10px solid black;
+  padding-top: 20px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 #currentDay {

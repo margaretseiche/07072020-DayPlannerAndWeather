@@ -89,25 +89,28 @@ $(document).ready(function() {
             }).then(function(response) {
                 console.log(response);   
 
-            var cityTodayHeadline = $("<h2 id='todayHeadline'>").text(citySearch + " (" + (moment().format('dddd, MMMM Do YYYY')) + ")");
+            var cityTodayHeadline = $("<h2 id='todayHeadline'>").text(citySearch + " (Current Weather)");
         
             var todayIconURL = "https://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png";
             var weatherIcon = $("<img id='todayImg'>").attr("src",todayIconURL);   
 
             var currentTime = $("<h4>").text(moment().format('h:mm a')); 
-            var currentTemp = $("<p>").text("Temperature: " + Math.round((response.main.temp)) + " degrees F");   
-            var todayHighTemp = $("<p>").text("High: " + Math.round((response.main.temp_max)) + " degrees F").addClass("class","tempdetail");   
-            var todayLowTemp = $("<p>").text("Low: " + Math.round((response.main.temp_min)) + " degrees F").addClass("class","tempdetail");       
+            var currentTemp = $("<p>").text("Temperature: " + Math.round((response.main.temp)) + "\u2109");   
+            var todayHighTemp = $("<p>").text("High: " + Math.round((response.main.temp_max)) + "\u2109").addClass("class","tempdetail");   
+            var todayLowTemp = $("<p>").text("Low: " + Math.round((response.main.temp_min)) + "\u2109").addClass("class","tempdetail");       
             var humidity = $("<p>").text("Humidity: " + response.main.humidity + "%");
             var windspeed = $("<p>").text("Wind Speed: " + response.wind.speed + "MPH");  
 
             today.append(cityTodayHeadline);   
-            var todayCardText = $("<div class='col-lg-4 card-body todayCard'>").appendTo(today);
-            var todayCardImage = $("<div class='col-lg-4 card-body todayCard'>").appendTo(today);
-            var todayCardBlank = $("<div class='col-lg-4 card-body todayCard'>").appendTo(today);
+            var todayCardText = $("<div class='col-sm-4 card-body todayCard'>").appendTo(today);
+            // var todayCardBlank = $("<div class='col-sm-2 card-body todayCard'>").appendTo(today);
+            var todayCardHumidity = $("<div class='col-sm-4 card-body todayCard'>").appendTo(today);
+            var todayCardImage = $("<div class='col-sm-4 card-body todayCard'>").appendTo(today);
 
-            todayCardText.append(currentTime,currentTemp,todayHighTemp,todayLowTemp,humidity,windspeed);        
-            todayCardImage.append(weatherIcon);        
+
+            todayCardText.append(currentTemp,todayHighTemp,todayLowTemp);          
+            todayCardHumidity.append(humidity,windspeed);      
+            todayCardImage.append(weatherIcon);   
         
             var latitude = response.coord.lat;
             var longitude = response.coord.lon;        
@@ -121,7 +124,7 @@ $(document).ready(function() {
             }).then(function(response) {
                 console.log(response);     
         
-            var uvIndexOutput = $("<p>").text("UV Index:  ").appendTo(todayCardText);
+            var uvIndexOutput = $("<p>").text("UV Index:  ").appendTo(todayCardHumidity);
             var uvText = $("<span id='uv'>").text(response.value).appendTo(uvIndexOutput);   
             });    
               
@@ -154,13 +157,13 @@ $(document).ready(function() {
                             
                             var forecastYear = response.list[m].dt_txt[0] + response.list[m].dt_txt[1] + response.list[m].dt_txt[2] + response.list[m].dt_txt[3];   
                             var forecastDateText = $("<p id='forecastDate'>").text(forecastMonth + "/" + forecastDay + "/" + forecastYear);
-                            var forecastTemp = $("<p>").text("Temperature: " + Math.round(response.list[m].main.temp) + " degrees F");   
+                            var forecastTemp = $("<p>").text("Temperature: " + Math.round(response.list[m].main.temp) + "\u2109");   
                             var forecastHumidity = $("<p>").text("Humidity: " + response.list[m].main.humidity + "%");  
                             
                             var forecastIconURL = "https://openweathermap.org/img/wn/" + response.list[m].weather[0].icon + "@2x.png";
                             var weatherIcon = $("<img id='forecastImg'>").attr("src",forecastIconURL);   
 
-                            var card = $("<div class='col-sm-2 card-body card'>").appendTo(forecast);
+                            var card = $("<div class='card-body card'>").appendTo(forecast);
 
                             card.append(forecastDateText,weatherIcon,forecastTemp,forecastHumidity);
                         } 
