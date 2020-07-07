@@ -1,0 +1,97 @@
+.container-fluid {
+    padding: 10px;
+    padding-right: 0;
+}
+
+.col-lg-9 {
+    padding-right: 0;
+}
+
+#aside {
+    background-color: #b3e6ff; 
+    border-radius: 0.3em;
+}
+
+#search-box {
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+.history-button {
+    margin: 0.5em;
+    margin-top: 0em;
+    float: right;
+    background-color: gold;
+}
+
+.weatherCity {
+    list-style-type: none;
+    margin: 2em, 1em, 0, 0.5em;
+    padding-top: 0.5em;
+    padding-left: 1em;
+    border-top: 1px solid rgb(194, 192, 192);
+}
+
+#cityListItem {
+    padding: 0;
+    margin: 0;
+}
+
+#today {
+    background-color: rgb(253, 235, 183);
+    margin: 1em;
+    padding: 1em;
+    border-radius: 0.3em;
+}
+
+/*#todayHeadline {
+    float: left;
+} */
+
+.todayCard {
+    float: left;
+}
+
+#forecast {
+    background-color: rgb(253, 235, 183);
+    margin: 1em;
+    padding: 1em;
+    border-radius: 0.3em;
+    height: 50%;
+}
+
+#forecastImg {
+    height: 6rem;
+    width: 6rem;
+}
+
+#todayImg {
+   /* margin-top: 0;  */
+   height: 16rem;
+   width: 16rem;
+}
+
+.weatherRow {
+    width: 100%;
+}
+
+#uv {
+    background-color: red;
+    color: white;
+    padding: 0.3em;
+    border-radius: 0.3em;
+}
+
+.card {
+    background-color: blue;
+    color: white;
+    margin: 1%;  
+    padding: 1em;
+    border-radius: 0.3em;
+    float: left;
+}
+
+#forecastDate {
+    font-weight: bold;
+    color: gold;
+}
