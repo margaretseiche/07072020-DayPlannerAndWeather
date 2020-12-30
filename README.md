@@ -1,6 +1,6 @@
-# 07072020-DayPlannerAndWeather
+# DayPlannerAndWeather
 
-https://margaretseiche.github.io/07072020-DayPlannerAndWeather/
+https://margaretseiche.github.io/DayPlannerAndWeather/
 
 ![tes](/DayPlanner.JPG)
 
