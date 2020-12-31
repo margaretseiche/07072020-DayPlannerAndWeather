@@ -15,12 +15,13 @@ For weather
 * I found the degree symbol.  Using \u2109 includes the degree symbol and F (for Fahrenheit), which saves space.
 * Because the date and time are already at the top, I removed those repetitive parts from today's weather.
 
-## Contribution
+## Technologies
+JQuery, Google fonts API, Moment.js, OpenWeatherMap API, local storage 
 
+## Contribution
 If you would like to contribute please create an issue. Alternatively, clone this repo and make modifications to your copy.
 
 ## Authors
-
 * Margaret Seiche, Github: margaretseiche
 <img alt="Margaret Seiche" src="https://avatars.githubusercontent.com/margaretseiche?s=200" width="200" height="200">
 
