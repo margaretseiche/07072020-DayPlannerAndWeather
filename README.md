@@ -5,6 +5,9 @@ https://margaretseiche.github.io/DayPlannerAndWeather/
 ![tes](/DayPlanner.JPG)
 
 ## Description
+I created a day planner with local storage to track daily tasks as well as weather forecasts.
+
+## Methodologies
 I combined 2 previous projects --- a day planner and a weather search engine.  I combined them into one index file.  To make the code less confusing, I left the style sheets and script files separate.  
 
 I found a few spots with common names (like 'row') and changed them so that they would not interfere with each other.
